@@ -28,6 +28,6 @@
     @endif
 
     {{-- タスクリスト作成ページへのリンク --}}
-    <a class="btn btn-primary" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a>
+    {{-- <a class="btn btn-primary" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a> --}}
 
 @endsection

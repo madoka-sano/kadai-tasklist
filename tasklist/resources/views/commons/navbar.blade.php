@@ -8,7 +8,12 @@
         <div class="flex-none">
             <ul tabindex="0" class="menu hidden lg:block lg:menu-horizontal">
                 {{-- タスクリスト作成ページへのリンク --}}
-                <li><a class="link link-hover" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a></li>
+                <li>
+                    <a class="link link-hover" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> ログアウト </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+                </li>
+                
             </ul>
             <div class="dropdown dropdown-end">
                 <button type="button" tabindex="0" class="btn btn-square btn-ghost lg:hidden">
@@ -18,7 +23,11 @@
                 </button>
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-info">
                     {{-- タスクリスト作成ページへのリンク --}}
-                    <li><a class="link link-hover" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a></li>
+                    <li>
+                        <a class="link link-hover" href="{{ route('tasks.create') }}">新規タスクリストの投稿</a>
+                        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> ログアウト </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
+                    </li>
                 </ul>
             </div>
         </div>
