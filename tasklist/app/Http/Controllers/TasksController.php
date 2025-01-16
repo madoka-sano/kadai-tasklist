@@ -11,8 +11,10 @@ class TasksController extends Controller
     // getでtasks/にアクセスされた場合の「一覧表示処理」
     public function index()
     {
+        /* ユーザーごとに分けるため、一覧取得は不要
         // タスクリスト一覧を取得
-        $tasks = Task::all();         /* 追加 */
+        $tasks = Task::all();
+        */
         
         //dd(\Auth::check());
         
